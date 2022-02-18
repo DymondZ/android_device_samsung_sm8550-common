@@ -320,6 +320,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
+# SPen
+ifeq ($(TARGET_HAS_SPEN),true)
+PRODUCT_PACKAGES += \
+    SPenActions \
+    vendor.samsung.hardware.spen-service
+endif
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
