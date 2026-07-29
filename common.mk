@@ -127,7 +127,8 @@ PRODUCT_PACKAGES += \
 
 # EUICC
 PRODUCT_PACKAGES += \
-    SamsungEuicc
+    SamsungEuicc \
+    SamsungEsimSwitcher
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
@@ -197,6 +198,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
+    init.esim_switch.rc \
     init.fingerprint.rc \
     init.nfc.samsung.rc \
     init.ramplus.rc \
