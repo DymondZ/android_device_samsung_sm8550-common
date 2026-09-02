@@ -170,6 +170,10 @@ service factory_ssc /vendor/bin/factory.ssc
 
 on property:sys.boot_completed=1
     setprop ro.factory.sensor.delay.init 1
+    
+    # Disable S-Pen hardware to kill wacom_wakelock
+    write /sys/class/sec/sec_epen/epen_disable_mode 1
+    write /sys/class/sec/sec_epen/epen_saving_mode 1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
